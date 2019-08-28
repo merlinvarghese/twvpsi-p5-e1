@@ -1,4 +1,16 @@
 package com.tw.vapasi;
 
-public class Rectangle {
+// Models a shape with 4 sides joining at right angle with each other
+class Rectangle {
+    private double length;
+    private double width;
+
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    double area(){
+        return length * width;
+    }
 }
