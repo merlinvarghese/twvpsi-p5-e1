@@ -5,12 +5,25 @@ class Rectangle {
     private double length;
     private double width;
 
-    Rectangle(double length, double width) {
+    private Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
     }
 
-    double area(){
+    private Rectangle(double side) {
+        this(side, side);
+    }
+
+    //static methods to create square and rectangle, using factory method design pattern
+    static Rectangle createSquare(double side) {
+        return new Rectangle(side);
+    }
+
+    static Rectangle createRectangle(double length, double width) {
+        return new Rectangle(length, width);
+    }
+
+    double area() {
         return length * width;
     }
 
